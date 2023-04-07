@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using System.Linq;
 using GameDatabase.DataModel;
 using GameDatabase.Model;
@@ -23,20 +24,20 @@ namespace GameServices.Player
 
         public int Money
         {
-            get { return _session.Resources.Money; }
-            set { _session.Resources.Money = Clamp(value); }
+            get => Cheats.GetCheatedResourcesAmount();
+            set {}
         }
 
         public int Stars
         {
-            get { return _session.Resources.Stars; }
-            set { _session.Resources.Stars = Clamp(value); }
+            get => Cheats.GetCheatedResourcesAmount();
+            set {}
         }
 
         public int Tokens
         {
-            get { return _session.Resources.Tokens; }
-            set { _session.Resources.Tokens = Clamp(value); }
+            get => Cheats.GetCheatedResourcesAmount();
+            set {}
         }
 
         public int Snowflakes
@@ -47,8 +48,8 @@ namespace GameServices.Player
 
         public int Fuel
         {
-            get { return _session.Resources.Fuel; }
-            set { _session.Resources.Fuel = Clamp(value, _skills.MainFuelCapacity); }
+            get => 600;
+            set {}
         }
 
         public IEnumerable<ItemId<QuestItem>> Resources { get { return _session.Resources.Resources.Items.Select(item => new ItemId<QuestItem>(item.Key)); } }

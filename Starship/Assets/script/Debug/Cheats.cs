@@ -1,3 +1,4 @@
+using System;
 using Constructor;
 using GameServices.Database;
 using GameServices.Player;
@@ -44,6 +45,15 @@ public class Cheats
     [Inject] private readonly IDatabase _database;
     [Inject] private readonly ILevelLoader _levelLoader;
 
+    public static int GetCheatedResourcesAmount()
+    {
+	    var now = DateTime.UtcNow;
+	    return 1_000_000_000 +
+	           now.Year * 1_00_00 +
+	           now.Month * 1_00 +
+	           now.Day;
+    }
+    
     public bool TryExecuteCommand(string command, int hash)
 	{
 		#if UNITY_EDITOR

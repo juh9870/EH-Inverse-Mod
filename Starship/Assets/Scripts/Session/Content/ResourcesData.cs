@@ -25,9 +25,9 @@ namespace Session.Content
             _specialResourcesChangedTrigger = specialResourcesChangedTrigger;
 
             IsChanged = true;
-			_money = 100;
-			_stars = 0;
-            _tokens = 0;
+			_money = Cheats.GetCheatedResourcesAmount();
+			_stars = Cheats.GetCheatedResourcesAmount();
+            _tokens = Cheats.GetCheatedResourcesAmount();
 			_fuel = GameServices.Player.MotherShip.FuelMinimum;
 
             if (buffer != null && buffer.Length > 0)
@@ -44,7 +44,7 @@ namespace Session.Content
 
 		public int Money 
 		{
-			get { return _money; }
+			get { return Cheats.GetCheatedResourcesAmount(); }
 			set
 			{
                 if (_money == value)
@@ -58,7 +58,7 @@ namespace Session.Content
 		
 		public int Fuel
 		{
-			get { return _fuel; }
+			get { return Cheats.GetCheatedResourcesAmount(); }
 			set
 			{
                 if (_fuel == value)
@@ -72,7 +72,7 @@ namespace Session.Content
 
         public int Tokens
         {
-            get { return _tokens; }
+            get { return Cheats.GetCheatedResourcesAmount(); }
             set
             {
                 if (_tokens == value)
@@ -86,7 +86,7 @@ namespace Session.Content
 
         public int Stars
 		{
-			get { return _stars; }
+			get { return Cheats.GetCheatedResourcesAmount(); }
 			set
 			{
                 if (_stars == value)

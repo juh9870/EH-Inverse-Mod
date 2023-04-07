@@ -35,7 +35,7 @@ public class Background : MonoBehaviour
 
 		var angle = RotationMax * Mathf.Sin(Time.time / 17);
 
-		_transform.localScale = _scaleVector * (2 * _mainCamera.orthographicSize * _mainCamera.aspect * scale);
+		_transform.localScale = _scaleVector * (2 * _mainCamera.orthographicSize * _mainCamera.aspect * scale) * new Vector2(1,-1);
 		_transform.localEulerAngles = new Vector3(0, 0, angle);
 		_renderer.material.color = new Color(alpha, alpha, alpha, 1);
 		LensFlare.brightness = flarePower;

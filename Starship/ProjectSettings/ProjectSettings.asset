@@ -12,8 +12,8 @@ PlayerSettings:
   targetDevice: 2
   useOnDemandResources: 0
   accelerometerFrequency: 60
-  companyName: ZipasGames
-  productName: Event Horizon
+  companyName: juh9870
+  productName: 'Event Horizon: Inverse Mod'
   defaultCursor: {fileID: 0}
   cursorHotspot: {x: 0, y: 0}
   m_SplashScreenBackgroundColor: {r: 0, g: 0, b: 0, a: 1}
@@ -167,7 +167,7 @@ PlayerSettings:
   androidSupportedAspectRatio: 1
   androidMaxAspectRatio: 2.1
   applicationIdentifier:
-    Android: com.ZipasGames.EventHorizon
+    Android: com.juh9870.InverseHorizon
     Standalone: unity.ZipasGames.Event Horizon
     Tizen: com.ZipasGames.EventHorizon
     iPhone: com.ZipasGames.EventHorizon
@@ -261,11 +261,11 @@ PlayerSettings:
   clonedFromGUID: 00000000000000000000000000000000
   templatePackageId: 
   templateDefaultScene: 
-  AndroidTargetArchitectures: 3
+  AndroidTargetArchitectures: 7
   AndroidSplashScreenScale: 0
   androidSplashScreen: {fileID: 0}
-  AndroidKeystoreName: D:/Projects/EventHorizon/Starship/license.keystore
-  AndroidKeyaliasName: event_horizon
+  AndroidKeystoreName: D:/EH/foss/iverse.keystore
+  AndroidKeyaliasName: inverse
   AndroidBuildApkPerCpuArchitecture: 0
   AndroidTVCompatibility: 1
   AndroidIsGame: 1
@@ -924,7 +924,7 @@ PlayerSettings:
   platformArchitecture:
     iPhone: 2
   scriptingBackend:
-    Android: 0
+    Android: 1
     Standalone: 0
     Windows Store Apps: 2
     iPhone: 1
